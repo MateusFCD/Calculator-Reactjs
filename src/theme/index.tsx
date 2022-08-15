@@ -46,16 +46,6 @@ export const theme = createTheme({
         },
       },
     },
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          fontSize: "1.4em",
-          border: "none",
-          backgroundColor: "#f0f0f0",
-          
-        },
-      },
-    },
   },
 });
 
@@ -68,4 +58,29 @@ export const DisplayCalculator = styled.div`
   font-size: 2.1em;
   color: #ffffff;
   overflow: hidden;
+`;
+
+export const Button = styled.button`
+  font-size: 1.4em;
+  border: 1px solid #888;
+  background-color: #f0f0f0;
+  outline: none;
+
+  :active {
+    background-color: #ccc;
+  }
+`;
+export const Double = styled(Button)`
+  grid-column: span 2;
+`;
+export const Triple = styled(Button)`
+  grid-column: span 3;
+`;
+export const Operation = styled(Button)`
+  background-color: #fa8231;
+  color: #fff;
+
+  :active {
+    background-color: #fa8231cc;
+  }
 `;
