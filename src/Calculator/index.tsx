@@ -3,28 +3,40 @@ import { Buttons } from "../components/Buttons";
 import { Display } from "../components/Display";
 
 export function Calculator() {
+  function clearMemory() {
+    console.log("limpar");
+  }
+
+  function setOperation(operation: string) {
+    console.log(operation);
+  }
+
+  function addDigit(n: number) {
+    console.log(n);
+  }
+
   return (
     <Container>
       <h1>Calculator</h1>
       <Card>
-        <Display value={100}/>
-        <Buttons label="AC" />
-        <Buttons label="/" />
-        <Buttons label={7} />
-        <Buttons label={8} />
-        <Buttons label={9} />
-        <Buttons label="*" />
-        <Buttons label={4} />
-        <Buttons label={5} />
-        <Buttons label={6} />
-        <Buttons label="-" />
-        <Buttons label={1} />
-        <Buttons label={2} />
-        <Buttons label={3} />
-        <Buttons label="+" />
-        <Buttons label={0} />
-        <Buttons label="." />
-        <Buttons label="=" />
+        <Display value={100} />
+        <Buttons label="AC" click={() => clearMemory()} />
+        <Buttons label="/" click={setOperation} />
+        <Buttons label={7} click={addDigit} />
+        <Buttons label={8} click={addDigit} />
+        <Buttons label={9} click={addDigit} />
+        <Buttons label="*" click={setOperation} />
+        <Buttons label={4} click={addDigit} />
+        <Buttons label={5} click={addDigit} />
+        <Buttons label={6} click={addDigit} />
+        <Buttons label="-" click={setOperation} />
+        <Buttons label={1} click={addDigit} />
+        <Buttons label={2} click={addDigit} />
+        <Buttons label={3} click={addDigit} />
+        <Buttons label="+" click={setOperation} />
+        <Buttons label={0} click={addDigit} />
+        <Buttons label="." click={addDigit} />
+        <Buttons label="=" click={setOperation} />
       </Card>
     </Container>
   );

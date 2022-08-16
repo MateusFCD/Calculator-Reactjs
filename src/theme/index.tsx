@@ -69,18 +69,35 @@ export const Button = styled.button`
   :active {
     background-color: #ccc;
   }
+
+  .Double {
+    grid-column: span 2;
+  }
+
+  .Triple {
+    grid-column: span 3;
+  }
+
+  .Operation {
+    background-color: #fa8231;
+    color: #fff;
+
+    :active {
+      background-color: #fa8231cc;
+    }
+  }
 `;
-export const Double = styled(Button)`
-  grid-column: span 2;
-`;
+// export const Double = styled(Button)`
+//   grid-column: span 2;
+// `;
 export const Triple = styled(Button)`
   grid-column: span 3;
 `;
-export const Operation = styled(Button)`
-  background-color: #fa8231;
-  color: #fff;
+// export const Operation = styled(Button)`
+//   background-color: #fa8231;
+//   color: #fff;
 
-  :active {
-    background-color: #fa8231cc;
-  }
-`;
+//   :active {
+//     background-color: #fa8231cc;
+//   }
+// `;
