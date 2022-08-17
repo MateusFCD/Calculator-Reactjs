@@ -20,6 +20,17 @@ export const theme = createTheme({
     },
   },
   components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          width: "13vw",
+          color: "#000",
+          backgroundColor: "#f0f0f0",
+          border: "1px solid #888",
+          outline: "none",
+        },
+      },
+    },
     MuiCard: {
       styleOverrides: {
         root: {
@@ -71,13 +82,7 @@ export const Button = styled.button`
   }
 `;
 
-export const Double = styled(Button)`
-  grid-column: span 2;
-`;
-export const Triple = styled(Button)`
-  grid-column: span 3;
-`;
-export const Operation = styled(Button)`
+export const Operation = styled(Button)<{ selected: boolean }>`
   background-color: #fa8231;
   color: #fff;
 
